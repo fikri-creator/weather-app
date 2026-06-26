@@ -1,0 +1,11 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node / build artifacts (not used here, but safe to include)
+node_modules/
+dist/

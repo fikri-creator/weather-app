@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🌤️ Weather App</h1>
+
+    <form id="search-form" class="search-form" autocomplete="off">
+      <label for="location-input" class="visually-hidden">Location</label>
+      <input
+        type="text"
+        id="location-input"
+        name="location"
+        placeholder="Enter a city (e.g. Jakarta, Tokyo, London)"
+        required
+      />
+      <button type="submit">Search</button>
+      <button type="button" id="unit-toggle" aria-label="Toggle temperature unit">
+        °C
+      </button>
+    </form>
+
+    <div id="loading" class="loading" hidden>
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading weather…</p>
+    </div>
+
+    <div id="error" class="error" role="alert" hidden></div>
+
+    <section id="current-weather" class="current-weather" hidden>
+      <h2 id="place-name"></h2>
+      <div class="current-main">
+        <img id="current-icon" alt="" />
+        <div class="current-temp">
+          <span id="current-temp-value"></span>
+        </div>
+      </div>
+      <p id="current-summary"></p>
+      <ul class="current-details">
+        <li>Feels like: <span id="current-feels"></span></li>
+        <li>Humidity: <span id="current-humidity"></span></li>
+        <li>Wind: <span id="current-wind"></span></li>
+      </ul>
+    </section>
+
+    <section id="forecast" class="forecast" hidden>
+      <h2>7-Day Forecast</h2>
+      <div id="forecast-cards" class="forecast-cards"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
