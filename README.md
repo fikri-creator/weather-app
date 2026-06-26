@@ -47,14 +47,14 @@ weather-app/
 
 The script is split into small, testable sections:
 
-| Section | Responsibility |
-| --- | --- |
-| `getCoordinates(location)` | Hit the geocoding API, return the best match |
-| `getWeather(lat, lon, unit)` | Hit the forecast API for current + 7 days |
-| `WMO_CODES` + `describeCode` | Map WMO weather codes to human labels |
-| `processWeatherData(place, raw)` | Shape the raw payload into a slim object |
-| `renderWeather(weather)` | Push the slim object into the DOM |
-| `handleSearch(location)` | Orchestrate the three steps above |
+| Section                          | Responsibility                               |
+| -------------------------------- | -------------------------------------------- |
+| `getCoordinates(location)`       | Hit the geocoding API, return the best match |
+| `getWeather(lat, lon, unit)`     | Hit the forecast API for current + 7 days    |
+| `WMO_CODES` + `describeCode`     | Map WMO weather codes to human labels        |
+| `processWeatherData(place, raw)` | Shape the raw payload into a slim object     |
+| `renderWeather(weather)`         | Push the slim object into the DOM            |
+| `handleSearch(location)`         | Orchestrate the three steps above            |
 
 ## License
 
